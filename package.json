@@ -1,0 +1,24 @@
+{
+  "name": "windows-notify",
+  "version": "0.0.1",
+  "description": "A notification center for Windows",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jvalle/windows-notify.git"
+  },
+  "keywords": [
+    "notification",
+    "windows",
+    "growl"
+  ],
+  "author": "Jason Valle",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/jvalle/windows-notify/issues"
+  },
+  "homepage": "https://github.com/jvalle/windows-notify"
+}
