@@ -10,7 +10,7 @@ And you'll need to create a config.js in the application's root folder of the fo
 ```javascript
 var config = {
     // Gmail Account Settings
-    'gmailAccount': accountName@gmailaddress.com || env.variable
+    'gmailAccount': accountName@gmailaddress.com || env.variable,
     'gmailPassword': GmailPassword || env.variable
 }
 
