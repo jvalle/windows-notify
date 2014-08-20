@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/jvalle/windows-notify",
   "dependencies": {
-    "node-notifier": "~3.1.3"
+    "node-notifier": "~3.1.3",
+    "mail-listener2": "~0.1.7"
   }
 }
