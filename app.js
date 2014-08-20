@@ -11,7 +11,7 @@ var mailListener = new MailListener({
     tls: true,
     tlsOptions: { rejectUnauthorized: false },
     mailbox: 'INBOX',
-    markSeen: false,
+    markSeen: true,
     fetchUnreadOnStart: false, // use it only if you want to get all unread email on lib start. Default is `false`,
     mailParserOptions: {streamAttachments: true}, // options to be passed to mailParser lib.
     attachments: true, // download attachments as they are encountered to the project directory
@@ -55,6 +55,7 @@ function notify (notice) {
         title: notice.title,
         message: notice.message,
         icon: notice.iconDir,
-        sticky: notice.sticky
+        sticky: notice.sticky,
+        callbackTarget: 'http://mail.google.com'
     });
 }
