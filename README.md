@@ -4,7 +4,7 @@ Windows Notify
 A notification center so Windows users can play too.
 
 ## Requirements:
-[You'll need Growl for Windows Installed](http://www.growlforwindows.com/gfw/)
+You'll need [Growl for Windows](http://www.growlforwindows.com/gfw/) installed.
 
 And you'll need to create a config.js in the application's root folder of the following form:
 ```javascript
