@@ -4,7 +4,7 @@ var Notification = require('node-notifier'),
 if (config.gmailAccount) {
     var imapListener = require('./modules/imap-listener'),
         ml = imapListener.init(),
-        unreadMail = [];
+        messageIDs = [];
 
     ml.start();
 
@@ -12,9 +12,11 @@ if (config.gmailAccount) {
         console.log('Imap Connected');
     });
 
-    ml.on('message', function (mail, seqno, attributes) {
-        console.log(seqno);
-        notify(imapListener.buildEmailNotice(mail));
+    ml.on('mail', function (mail, seqno, attributes) {
+        if (messageIDs.indexOf(seqno) < 0) {
+            notify(imapListener.buildEmailNotice(mail));
+            messageIDs.push(seqno);
+        }
     });
 }
 
