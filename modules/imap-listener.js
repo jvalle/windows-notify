@@ -26,7 +26,7 @@ imapListener.buildEmailNotice = function (email, callback) {
 
     notice.title = 'E-mail from ' + email.from[0].name + ' (' + email.from[0].address + ')';
     notice.message = email.subject;
-    notice.iconDir = __dirname + '/images/gmail.png';
+    notice.icon = __dirname + '/images/gmail.png';
 
     if (email.priority !== 'normal') {
         notice.sticky = true;
