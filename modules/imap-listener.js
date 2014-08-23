@@ -27,6 +27,9 @@ imapListener.buildEmailNotice = function (email, callback) {
     notice.title = 'E-mail from ' + email.from[0].name + ' (' + email.from[0].address + ')';
     notice.message = email.subject;
     notice.icon = __dirname + '/images/gmail.png';
+    // adding a url member to the object to coincide with growler 0.0.2 callbackurl.  need to update this manually
+    // also, i don't like opening a new gmail window on every click so i want to find a nicer way to do this
+    notce.url = 'http://mail.google.com'
 
     if (email.priority !== 'normal') {
         notice.sticky = true;
